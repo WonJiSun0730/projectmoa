@@ -1,0 +1,26 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    session:
+      timeout: 60m
+      cookie:
+        http-only: true
+        same-site: lax
+        secure: ${COOKIE_SECURE:false}
+spring:
+  datasource:
+    url: ${MOA_DB_URL:jdbc:h2:file:./.data/moa;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_ON_EXIT=FALSE}
+    username: ${MOA_DB_USERNAME:sa}
+    password: ${MOA_DB_PASSWORD:}
+  sql:
+    init:
+      mode: always
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 21MB
+  jackson:
+    time-zone: Asia/Seoul
+moa:
+  demo-data: ${MOA_DEMO_DATA:true}
+  upload-dir: ${MOA_UPLOAD_DIR:./.data/uploads}
