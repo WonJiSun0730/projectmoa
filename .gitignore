@@ -1,0 +1,11 @@
+**/target/
+**/node_modules/
+frontend/dist/
+.data/
+backend/.data/
+.env
+.idea/
+.vscode/
+*.log
+*.pid
+!docs/screenshots/
