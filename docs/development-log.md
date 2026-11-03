@@ -18,7 +18,9 @@ GitHub의 Commits·Branches 화면에서 실제 커밋 메시지와 브랜치를
 - 백엔드 테스트: Java 25에서 Java 21 대상으로 컴파일, H2 메모리 DB에서 HTTP 통합 테스트 14개 통과
 - 백엔드 패키지: Spring Boot 실행 JAR 생성
 - 프론트: Vite 프로덕션 번들 생성, 로컬 환경의 자식 프로세스 실행 제약 때문에 인프로세스 Babel 변환을 적용한 검증 경로 사용
-- 표준 `npm ci`와 `npm run build`는 GitHub Actions의 Linux 환경에서도 확인하도록 설정
+- 표준 `npm ci`, `npm run build`, 프론트 API 테스트 4개가 GitHub Actions의 Linux 환경에서 통과
+- Java 21의 GitHub Actions에서도 백엔드 테스트·패키지 검증 통과
+- [실제 CI 실행 결과](https://github.com/WonJiSun0730/projectmoa/actions/runs/41565403689)
 - 실제 브라우저: 로그인, 홍보 글 저장, 상세 페이지, 댓글 작성, 내 활동 집계 확인
 - 모바일: 360px 대응, 가로 넘침 없음
 
